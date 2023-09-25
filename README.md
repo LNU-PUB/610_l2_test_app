@@ -4,7 +4,19 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Startup
 
-First, run the development server:
+First, install all components:
+
+```bash
+npm install
+# or
+yarn
+# or
+yarn install
+# or
+pnpm install
+```
+
+then, run the development server:
 
 ```bash
 npm run dev
