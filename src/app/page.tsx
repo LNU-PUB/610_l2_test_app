@@ -67,11 +67,11 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
+      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/2 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
         <div className="flex flex-col items-center justify-top z-[1]">
           <h1 className="mb-4">Unit Converter Test App</h1>
           <div className="mt-4 p-4 border-2 rounded-md">
-            <h2 className="mb-4">Chose Conversion from</h2>
+            <h2 className="mb-4 text-center">Chose Conversion from</h2>
             <div className="flex flex-row justify-center">
               <form className="flex flex-col">
                 <h2 className="text-center mb-4"> Metric to Imperial</h2>
@@ -86,7 +86,7 @@ export default function Home() {
                     </select>
                   </div>
                   <div className="flex flex-col ml-2">
-                    <input type="text" name="imperial" id="imperial1" className="text-black mt-2 p-1" />
+                    <input type="text" name="imperial" id="imperial1" className="text-black mt-2 p-1" readOnly />
                     <select name="metricType" id="imperialType1" className="text-black mt-2 p-1">
                       <option value="mile">Mile</option>
                       <option value="yard">Yard</option>
@@ -115,7 +115,7 @@ export default function Home() {
                     </select>
                   </div>
                   <div className="flex flex-col  ml-2">
-                    <input type="text" name="metric" id="metric2" className="text-black mt-2 p-1" />
+                    <input type="text" name="metric" id="metric2" className="text-black mt-2 p-1" readOnly />
                     <select name="metricType" id="metricType2" className="text-black mt-2 p-1" >
                       <option value="kilometer">Kilometers</option>
                       <option value="meter">Meter</option>
@@ -140,7 +140,7 @@ export default function Home() {
                     </select>
                   </div>
                   <div className="flex flex-col  ml-2">
-                    <input type="text" name="tempTo" id="toTemperature" className="text-black mt-2 p-1" />
+                    <input type="text" name="tempTo" id="toTemperature" className="text-black mt-2 p-1" readOnly />
                     <select name="tempToType" id="toType" defaultValue="fahrenheit" className="text-black mt-2 p-1" >
                       <option value="celsius">Celsius</option>
                       <option value="fahrenheit">Fahrenheit</option>
