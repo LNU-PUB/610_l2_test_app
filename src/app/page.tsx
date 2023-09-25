@@ -14,7 +14,7 @@ export default function Home() {
   const imperialToMetric = unitconverter.ImperialToMetric
   const temperature = unitconverter.TemperatureConverter
 
-  const convertMetricToImperial = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const convertMetricToImperial = (e: React.MouseEvent<HTMLInputElement>) => {
     e.preventDefault()
     const metricInput = document.querySelector<HTMLInputElement>("#metric1")
     const metric = metricInput?.value ? Number(metricInput.value) : 0
@@ -31,7 +31,7 @@ export default function Home() {
     document.querySelector<HTMLInputElement>("#imperial1")!.value = resultRounded.toString()
   }
 
-  const convertImperialToMetric = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const convertImperialToMetric = (e: React.MouseEvent<HTMLInputElement>) => {
     e.preventDefault()
     const imperialInput = document.querySelector<HTMLInputElement>("#imperial2")
     const imperial = imperialInput?.value ? Number(imperialInput.value) : 0
@@ -48,7 +48,7 @@ export default function Home() {
     document.querySelector<HTMLInputElement>("#metric2")!.value = resultRounded.toString()
   }
 
-  const convertTemperatures = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const convertTemperatures = (e: React.MouseEvent<HTMLInputElement>) => {
     e.preventDefault()
     const fromTempInput = document.querySelector<HTMLInputElement>("#fromTemperature")
     const fromTemp = fromTempInput?.value ? Number(fromTempInput.value) : 0
@@ -141,9 +141,9 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col  ml-2">
                     <input type="text" name="tempTo" id="toTemperature" className="text-black mt-2 p-1" />
-                    <select name="tempToType" id="toType" className="text-black mt-2 p-1" >
+                    <select name="tempToType" id="toType" defaultValue="fahrenheit" className="text-black mt-2 p-1" >
                       <option value="celsius">Celsius</option>
-                      <option value="fahrenheit" selected>Fahrenheit</option>
+                      <option value="fahrenheit">Fahrenheit</option>
                       <option value="kelvin">Kelvin</option>
                     </select>
                   </div>
